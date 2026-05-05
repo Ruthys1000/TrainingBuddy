@@ -32,14 +32,13 @@ export default function ToolCard({ tool, index }: ToolCardProps) {
         target="_blank"
         rel="noopener noreferrer"
         className={cn(
-          'group block bg-card rounded-2xl border border-border p-6 shadow-sm',
-          'hover:-translate-y-1.5 hover:shadow-xl',
-          'transition-all duration-200 ease-out',
+          'card-glow group block bg-card rounded-2xl border border-border p-6 shadow-sm',
+          'hover:-translate-y-1.5',
           colors.hoverBorder
         )}
         style={
           {
-            '--glow': colors.glowColor,
+            '--glow-color': colors.glowColor,
           } as React.CSSProperties
         }
       >
@@ -47,11 +46,11 @@ export default function ToolCard({ tool, index }: ToolCardProps) {
         <div className="flex items-start justify-between mb-4">
           <div
             className={cn(
-              'w-12 h-12 rounded-xl flex items-center justify-center',
+              'w-14 h-14 rounded-xl flex items-center justify-center',
               colors.iconBg
             )}
           >
-            <Icon className={cn('w-6 h-6', colors.iconText)} />
+            <Icon className={cn('w-7 h-7', colors.iconText)} />
           </div>
           {tool.badge && (
             <span
