@@ -67,7 +67,7 @@ body {
 
 /* Gradient text utility */
 .gradient-text {
-  background: linear-gradient(135deg, #2563EB 0%, #7C3AED 50%, #2563EB 100%);
+  background: linear-gradient(135deg, #1d4ed8 0%, #60a5fa 50%, #1d4ed8 100%);
   background-size: 200% auto;
   -webkit-background-clip: text;
   background-clip: text;
@@ -85,7 +85,7 @@ body {
 .shimmer-border {
   position: relative;
   background: linear-gradient(white, white) padding-box,
-    linear-gradient(90deg, #2563EB, #7C3AED, #F97316, #2563EB) border-box;
+    linear-gradient(90deg, #1d4ed8, #93c5fd, #3b82f6, #1d4ed8) border-box;
   background-size: 200% auto;
   border: 1.5px solid transparent;
   animation: shimmer-rotate 3s linear infinite;

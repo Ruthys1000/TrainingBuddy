@@ -92,7 +92,7 @@ export default function HeroSection() {
         >
           <a
             href="#tools"
-            className="inline-flex items-center gap-2 px-8 py-3.5 bg-accent text-white font-semibold rounded-xl shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all duration-200 text-base"
+            className="inline-flex items-center gap-2 px-8 py-3.5 bg-gradient-to-l from-blue-500 to-blue-700 text-white font-semibold rounded-xl shadow-lg shadow-blue-200 hover:shadow-xl hover:shadow-blue-300 hover:-translate-y-0.5 transition-all duration-200 text-base"
           >
             גלה את הכלים
             <ArrowDown className="w-4 h-4" />
