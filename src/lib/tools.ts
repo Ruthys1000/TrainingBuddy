@@ -15,7 +15,7 @@ export const tools: Tool[] = [
     tagline: 'מחולל לו״ז לימי למידה מרחוק',
     description:
       'יוצר לוח זמנים מפורט ליום הדרכה מרחוק, כולל הודעת ווטסאפ מוכנה לשליחה ישירה ותכנים רלוונטיים מהאינטרנט — בהתאם לאילוצים ולהגדרות שלך.',
-    href: 'https://example.com/luzon',
+    href: 'https://luzon-ruthys.vercel.app/',
     icon: Calendar,
     color: 'blue',
     badge: 'חדש',
@@ -26,7 +26,7 @@ export const tools: Tool[] = [
     tagline: 'שפר את יכולת הכתיבה המקצועית שלך',
     description:
       'מאבחן פערים בכתיבה ומספק יחידות מיקרו-למידה ממוקדות בזמן אמת — לא רק מתקן את הטקסט, אלא מפתח את כשירות הכתיבה שלך לאורך זמן.',
-    href: 'https://example.com/writing-coach',
+    href: 'https://writingcoach-production.up.railway.app/',
     icon: PenLine,
     color: 'violet',
   },
