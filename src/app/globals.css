@@ -107,6 +107,21 @@ body {
   animation: blob-float 8s ease-in-out infinite;
 }
 
+/* Dot grid background */
+.dot-grid {
+  background-image: radial-gradient(circle, #cbd5e1 1px, transparent 1px);
+  background-size: 26px 26px;
+}
+
+/* Card glow on hover */
+.card-glow {
+  transition: box-shadow 0.25s ease, transform 0.2s ease;
+}
+.card-glow:hover {
+  box-shadow: 0 0 0 1px color-mix(in srgb, var(--glow-color) 40%, transparent),
+              0 8px 48px color-mix(in srgb, var(--glow-color) 35%, transparent);
+}
+
 /* Reduce motion */
 @media (prefers-reduced-motion: reduce) {
   .gradient-text { animation: none; }
