@@ -75,6 +75,24 @@ body {
   animation: gradient-shift 4s ease infinite;
 }
 
+/* Hero dark variant gradient text */
+.gradient-text-hero {
+  background: linear-gradient(135deg, #93c5fd 0%, #c4b5fd 50%, #93c5fd 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradient-shift 4s ease infinite;
+}
+
+/* Dark hero mesh gradient */
+.hero-mesh {
+  background:
+    radial-gradient(ellipse 80% 60% at 10% 30%, rgba(99, 102, 241, 0.45) 0%, transparent 60%),
+    radial-gradient(ellipse 70% 70% at 88% 10%, rgba(139, 92, 246, 0.4) 0%, transparent 60%),
+    radial-gradient(ellipse 60% 50% at 50% 100%, rgba(37, 99, 235, 0.3) 0%, transparent 60%);
+}
+
 @keyframes gradient-shift {
   0% { background-position: 0% center; }
   50% { background-position: 100% center; }
@@ -110,6 +128,12 @@ body {
 /* Dot grid background */
 .dot-grid {
   background-image: radial-gradient(circle, #cbd5e1 1px, transparent 1px);
+  background-size: 26px 26px;
+}
+
+/* Dark dot grid for hero */
+.dot-grid-dark {
+  background-image: radial-gradient(circle, rgba(255,255,255,0.06) 1px, transparent 1px);
   background-size: 26px 26px;
 }
 
