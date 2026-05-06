@@ -14,15 +14,37 @@ const visible = { opacity: 1, y: 0 }
 
 export default function HeroSection() {
   return (
-    <section className="relative overflow-hidden bg-slate-950 py-24 sm:py-32 lg:py-44">
-      {/* Mesh gradient */}
-      <div className="absolute inset-0 hero-mesh" />
+    <section className="relative overflow-hidden py-24 sm:py-32 lg:py-44">
+      {/* Gradient background */}
+      <div className="absolute inset-0 bg-gradient-to-b from-white via-slate-50/80 to-background" />
 
-      {/* Dot grid overlay */}
-      <div className="dot-grid-dark absolute inset-0" />
+      {/* Dot grid */}
+      <div className="dot-grid absolute inset-0 opacity-50" />
 
-      {/* Bottom fade to page background */}
-      <div className="absolute bottom-0 inset-x-0 h-40 bg-gradient-to-t from-background to-transparent" />
+      {/* Decorative blobs */}
+      <div
+        className="blob-animate absolute -top-40 start-1/4 w-[700px] h-[700px] rounded-full"
+        style={{
+          background:
+            'radial-gradient(circle, rgba(37,99,235,0.18) 0%, transparent 65%)',
+        }}
+      />
+      <div
+        className="blob-animate absolute top-10 end-1/4 w-[550px] h-[550px] rounded-full"
+        style={{
+          background:
+            'radial-gradient(circle, rgba(124,58,237,0.15) 0%, transparent 65%)',
+          animationDelay: '3s',
+        }}
+      />
+      <div
+        className="blob-animate absolute bottom-0 start-1/2 w-[400px] h-[400px] rounded-full"
+        style={{
+          background:
+            'radial-gradient(circle, rgba(249,115,22,0.10) 0%, transparent 65%)',
+          animationDelay: '5s',
+        }}
+      />
 
       <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         {/* Badge */}
@@ -32,8 +54,8 @@ export default function HeroSection() {
           transition={transition(0)}
           className="inline-flex mb-8"
         >
-          <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 backdrop-blur-sm text-sm font-medium text-white/70 border border-white/10">
-            <Sparkles className="w-3.5 h-3.5 text-blue-400" />
+          <span className="shimmer-border inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white text-sm font-medium text-foreground shadow-sm">
+            <Sparkles className="w-3.5 h-3.5 text-primary" />
             כלים מבוססי AI למנהלי למידה
           </span>
         </motion.div>
@@ -43,11 +65,11 @@ export default function HeroSection() {
           initial={hidden}
           animate={visible}
           transition={transition(0.1)}
-          className="text-5xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight leading-[1.08] mb-7 text-white"
+          className="text-5xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight leading-[1.08] mb-7"
         >
-          <span className="gradient-text-hero">הדרכה חכמה.</span>
+          <span className="gradient-text">הדרכה חכמה.</span>
           <br />
-          <span>מהירה. מדויקת.</span>
+          <span className="text-foreground">מהירה. מדויקת.</span>
         </motion.h1>
 
         {/* Sub-headline */}
@@ -55,13 +77,13 @@ export default function HeroSection() {
           initial={hidden}
           animate={visible}
           transition={transition(0.2)}
-          className="text-lg sm:text-xl text-slate-400 max-w-2xl mx-auto leading-relaxed mb-10"
+          className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed mb-10"
         >
           TrainingBuddy מרכז כלי AI שתוכננו במיוחד עבור מנהלי למידה והדרכה —
           חסוך זמן, שפר תוצאות, ועבוד בצורה חכמה יותר.
         </motion.p>
 
-        {/* CTAs */}
+        {/* CTA */}
         <motion.div
           initial={hidden}
           animate={visible}
@@ -70,14 +92,14 @@ export default function HeroSection() {
         >
           <a
             href="#tools"
-            className="inline-flex items-center gap-2 px-8 py-3.5 bg-gradient-to-l from-blue-500 to-indigo-600 text-white font-semibold rounded-xl shadow-lg shadow-blue-500/30 hover:shadow-xl hover:shadow-blue-500/50 hover:-translate-y-0.5 transition-all duration-200 text-base"
+            className="inline-flex items-center gap-2 px-8 py-3.5 bg-gradient-to-l from-blue-500 to-blue-700 text-white font-semibold rounded-xl shadow-lg shadow-blue-200 hover:shadow-xl hover:shadow-blue-300 hover:-translate-y-0.5 transition-all duration-200 text-base"
           >
             גלה את הכלים
             <ArrowDown className="w-4 h-4" />
           </a>
           <a
             href="#about"
-            className="inline-flex items-center gap-2 px-6 py-3.5 text-slate-400 hover:text-white font-medium rounded-xl hover:bg-white/5 border border-white/10 transition-all duration-150 text-base"
+            className="inline-flex items-center gap-2 px-6 py-3.5 text-muted-foreground hover:text-foreground font-medium rounded-xl hover:bg-slate-100 transition-colors duration-150 text-base"
           >
             למד עוד
           </a>
@@ -96,10 +118,10 @@ export default function HeroSection() {
             { label: 'מנהלי למידה', value: 'מאות' },
           ].map((stat) => (
             <div key={stat.label} className="text-center">
-              <div className="text-3xl font-extrabold text-white tabular-nums">
+              <div className="text-3xl font-extrabold text-foreground tabular-nums">
                 {stat.value}
               </div>
-              <div className="text-sm text-slate-500 mt-0.5">{stat.label}</div>
+              <div className="text-sm text-muted-foreground mt-0.5">{stat.label}</div>
             </div>
           ))}
         </motion.div>
