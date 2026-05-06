@@ -1,6 +1,6 @@
 import type { LucideIcon } from 'lucide-react'
 
-export type ToolColor = 'blue' | 'violet' | 'emerald' | 'orange'
+export type ToolColor = 'blue' | 'violet' | 'emerald' | 'orange' | 'rose' | 'teal' | 'amber'
 
 export interface Tool {
   id: string
